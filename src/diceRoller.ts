@@ -28,6 +28,7 @@ import {
   FateDieRoll,
   GroupedRollBase,
   MathFunctionRoll,
+  RollTypeResult,
 } from "./rollTypes";
 const parser = require("./diceroll.js");
 
@@ -87,22 +88,8 @@ export class DiceRoller {
     return this.rollType(parsed);
   }
 
-  private rollType(
-    input: RootType
-  ):
-    | RollBase
-    | DiceExpressionRoll
-    | GroupRoll
-    | DiceRollResult
-    | ExpressionRoll
-    | MathFunctionRoll {
-    let response:
-      | RollBase
-      | DiceExpressionRoll
-      | GroupRoll
-      | DiceRollResult
-      | ExpressionRoll
-      | MathFunctionRoll;
+  private rollType(input: RootType): RollTypeResult {
+    let response: RollTypeResult;
 
     switch (input.type) {
       case "diceExpression":
