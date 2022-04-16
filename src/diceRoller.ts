@@ -30,7 +30,9 @@ import {
   MathFunctionRoll,
   RollTypeResult,
 } from "./rollTypes";
-const parser = require("./diceroll.js");
+
+//@ts-expect-error ignore type
+import parser = require("./diceroll.js");
 
 // TODO: [[ {[[1d6]], 5}kh1 ]] fails due to white space "[[ {" - perhaps add .?* to pegjs file to allow optional spaces
 
