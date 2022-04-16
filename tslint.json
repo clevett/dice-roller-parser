@@ -22,5 +22,8 @@
         "allow-pascal-case"
       ]
     }
+  },
+  "linterOptions": {
+    "exclude": ["dist"]
   }
 }
