@@ -83,7 +83,7 @@ export class DiceRoller {
    * @param parsed A parsed input as a {@link RootType} string to be rolled
    * @returns A {@link RollBase} object representing the rolled dice input string
    */
-  public rollParsed(parsed: RootType): RollBase {
+  public rollParsed(parsed: RootType) {
     return this.rollType(parsed);
   }
 
