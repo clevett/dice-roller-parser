@@ -31,8 +31,8 @@ import {
   RollTypeResult,
 } from "./rollTypes";
 
-//@ts-ignore
-import parser = require("./diceroll.js");
+// tslint:disable-next-line: no-var-requires
+const parser = require("./diceroll.js");
 
 // TODO: [[ {[[1d6]], 5}kh1 ]] fails due to white space "[[ {" - perhaps add .?* to pegjs file to allow optional spaces
 
