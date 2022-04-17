@@ -31,8 +31,8 @@ import {
   RollTypeResult,
 } from "./rollTypes";
 
-//@ts-expect-error ignore type
-import parser = require("./diceroll.js");
+//@ts-ignore
+import parser from "./diceroll.js";
 
 // TODO: [[ {[[1d6]], 5}kh1 ]] fails due to white space "[[ {" - perhaps add .?* to pegjs file to allow optional spaces
 
@@ -68,7 +68,14 @@ export class DiceRoller {
    * @returns A {@link RollBase} object representing the rolled dice input string
    */
   public roll(input: string): RollBase {
+    console.log(`%c Dice Roller roll`, "color: lime");
+    console.log(input);
+
     const root = parser.parse(input);
+
+    console.log(`%c Dice Roller root`, "color: lime");
+    console.log(root);
+
     return this.rollType(root);
   }
 

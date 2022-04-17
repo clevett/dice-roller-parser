@@ -13,7 +13,7 @@
     "comment-format": [false, "check-space"],
     "no-duplicate-variable": true,
     "no-inferrable-types": true,
-    "no-console": [true, "log", "info", "trace", "debug", "time", "timeEnd"],
+    "no-console": [false, "log", "info", "trace", "debug", "time", "timeEnd"],
     "variable-name": {
       "options": [
         "ban-keywords",
