@@ -65,7 +65,7 @@ export class DiceRoller {
   /**
    * Parses and rolls a dice roll input string, returning an object representing the roll
    * @param input The input string to parse
-   * @returns A {@link RollBase} object representing the rolled dice input string
+   * @returns A {@link RollBase} object representing the  rolled dice input string
    */
   public roll(input: string): RollBase {
     const root = parser.parse(input);
@@ -92,7 +92,6 @@ export class DiceRoller {
 
   private rollType(input: RootType): RollTypeResult {
     let response: RollTypeResult;
-
     switch (input.type) {
       case "diceExpression":
         response = this.rollDiceExpr(input as RollExpressionType);
